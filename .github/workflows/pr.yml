@@ -22,4 +22,5 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v1
         with:
-          args: "./dist/client"
+          args: --fallback-extensions mdx --exclude-path "./node_modules" --exclude "http(s?)://localhost" "./**/*.mdx" "./**/*.md"
+          lycheeVersion: nightly
